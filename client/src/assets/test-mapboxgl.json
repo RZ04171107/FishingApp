@@ -1,0 +1,49 @@
+{
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Lincoln Park",
+        "description": "A northside park that is home to the Lincoln Park Zoo"
+      },
+      "geometry": {
+        "coordinates": [-87.637596, 41.940403],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Calumet Park",
+        "description": "A park on the Illinois-Indiana border featuring a historic fieldhouse"
+      },
+      "geometry": {
+        "coordinates": [-87.530221, 41.715515],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Jackson Park",
+        "description": "A lakeside park that was the site of the 1893 World's Fair"
+      },
+      "geometry": {
+        "coordinates": [-87.580389, 41.783185],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Columbus Park",
+        "description": "A large park in Chicago's Austin neighborhood"
+      },
+      "geometry": {
+        "coordinates": [-87.769775, 41.873683],
+        "type": "Point"
+      }
+    }
+  ],
+  "type": "FeatureCollection"
+}

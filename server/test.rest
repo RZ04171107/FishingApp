@@ -1,0 +1,50 @@
+GET http://localhost:8000/test
+
+###
+GET http://localhost:8000/fishingspots
+
+###
+GET http://localhost:8000/fishingspots/:_id
+
+###
+GET http://localhost:8000/fishingspots/aaaa
+
+###
+GET http://localhost:8000/pagenotfound
+
+###
+GET http://localhost:8000/fakeUser
+
+###
+POST http://localhost:8000/user/register
+Content-Type: application/json
+
+{
+    "username": "test",
+    "password": "password",
+    "email": "test@gmail.com"
+}
+
+###
+POST http://localhost:8000/user/login 
+Content-Type: application/json
+
+{
+    "username": "test",
+    "password": "password"
+}
+
+###
+POST http://localhost:8000/user/logout
+
+###
+GET http://localhost:8000/getauth
+
+###
+GET http://localhost:8000/plans/
+
+###
+POST http://localhost:8000/sendemail
+
+###
+GET http://localhost:8000/admin/user

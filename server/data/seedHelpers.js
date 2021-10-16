@@ -1,0 +1,30 @@
+module.exports.descriptors = [
+  "Forest",
+  "Ancient",
+  "Cascade",
+  "Silent",
+  "Redwood",
+  "Maple",
+  "Misty",
+  "Ocean",
+  "Sea",
+  "Dusty",
+  "Diamond",
+  "Petritied",
+  "Tumbling",
+  "Roaring",
+  "Elk",
+];
+
+module.exports.places = [
+  "Flats",
+  "Village",
+  "Pond",
+  "River",
+  "Spring",
+  "Bayshore",
+  "Creek",
+  "Creekside",
+  "Ghost Town",
+  "Hollow",
+];
