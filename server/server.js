@@ -12,6 +12,11 @@ const User = require("./models/user");
 const cors = require("cors");
 const bcrypt = require("bcrypt");
 const nodemailer = require("nodemailer");
+const dbUrl = process.env.DB_URL;
+const secret = process.env.SECRET || "mongo";
+const port = process.env.PORT || 8000;
+//const dbUrl = "mongodb://localhost:27017/FishingApp";
+const MongoStore = require("connect-mongo");
 
 const fishingspotRoutes = require("./routes/fishingspot");
 const reviewRoutes = require("./routes/reviews");
@@ -21,7 +26,12 @@ const adminRoutes = require("./routes/admin");
 const app = express();
 
 const sessionConfig = {
-  secret: "mongo",
+  store: MongoStore.create({
+    mongoUrl: dbUrl,
+    secret: secret,
+    touchAfter: 24 * 3600, //time period in seconds
+  }),
+  secret: secret,
   resave: false,
   saveUninitialized: true,
   cookie: {
@@ -46,7 +56,8 @@ const transporter = nodemailer.createTransport({
 });
 
 //--------------------CONNECT TO DATABASE-----------------
-mongoose.connect("mongodb://localhost:27017/FishingApp", {
+//"mongodb://localhost:27017/FishingApp"
+mongoose.connect(dbUrl, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
@@ -148,6 +159,6 @@ app.use((error, req, res, next) => {
   res.status(statusCode).send(message);
 });
 
-app.listen(8000, () => {
-  console.log("Serving on port 8000");
+app.listen(port, () => {
+  console.log("Serving on port :", port);
 });
