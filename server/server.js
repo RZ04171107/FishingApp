@@ -12,10 +12,10 @@ const User = require("./models/user");
 const cors = require("cors");
 const bcrypt = require("bcrypt");
 const nodemailer = require("nodemailer");
-const dbUrl = process.env.DB_URL;
+//const dbUrl = process.env.DB_URL;
 const secret = process.env.SECRET || "mongo";
 const port = process.env.PORT || 8000;
-//const dbUrl = "mongodb://localhost:27017/FishingApp";
+const dbUrl = "mongodb://localhost:27017/FishingApp";
 const MongoStore = require("connect-mongo");
 
 const fishingspotRoutes = require("./routes/fishingspot");

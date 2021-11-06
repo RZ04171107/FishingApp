@@ -59,43 +59,50 @@ const NewPlan = ({ currentUser }) => {
 
   return (
     <div>
-      Create a new fishing plan
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>Fishing Plan Title: </label>
-          <input
-            name="title"
-            type="text"
-            value={state.title}
-            onChange={handleChange}
-            required
-          />
-        </div>
+      <h1 className="text-center">Create A New Fishing Plan</h1>
+      <div className="col-6 offset-3">
+        <form onSubmit={handleSubmit}>
+          <div className="mb-3">
+            <label className="form-label">Fishing Plan Title:</label>
+            <input
+              className="form-control"
+              name="title"
+              type="text"
+              value={state.title}
+              onChange={handleChange}
+              required
+            />
+          </div>
 
-        <div>
-          <label>Participants:</label>
-          <input
-            name="people"
-            type="number"
-            value={state.people}
-            onChange={handleChange}
-            required
-          />
-        </div>
+          <div className="mb-3">
+            <label className="form-label">Participants:</label>
+            <input
+              className="form-control"
+              name="people"
+              type="number"
+              value={state.people}
+              onChange={handleChange}
+              required
+            />
+          </div>
 
-        <div>
-          <label>Description</label>
-          <textarea
-            name="description"
-            type="text"
-            value={state.description}
-            onChange={handleChange}
-            required
-          ></textarea>
-        </div>
+          <div className="mb-3">
+            <label className="form-label">Description:</label>
+            <textarea
+              className="form-control"
+              name="description"
+              type="text"
+              value={state.description}
+              onChange={handleChange}
+              required
+            ></textarea>
+          </div>
 
-        <button>Submit Fishing Plan</button>
-      </form>
+          <div className="mb-3">
+            <button className="btn btn-success">Submit Fishing Plan</button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 };
